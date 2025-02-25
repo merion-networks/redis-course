@@ -42,3 +42,7 @@ async def read_item(item_id: int, db: AsyncSession = Depends(get_db)):
 
     # Возвращаем данные объекта
     return item_data
+
+# BEGIN YOUR SOLUTION HERE
+
+# END

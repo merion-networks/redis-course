@@ -8,8 +8,8 @@ from app.schemas import Item as ItemSchema, ItemCreate
 from app.redis_client import redis_client
 
 router = APIRouter(
-    prefix="/items",  # Префикс для всех маршрутов в этом роутере
-    tags=["items"],  # Теги для документации Swagger
+    prefix="/items",
+    tags=["items"],
 )
 
 
@@ -42,6 +42,7 @@ async def read_item(item_id: int, db: AsyncSession = Depends(get_db)):
 
     return item_data
 
+# BEGIN YOUR SOLUTION HERE
 
 @router.get("/", response_model=list[ItemSchema])
 async def get_all_items(db: AsyncSession = Depends(get_db)):
@@ -50,7 +51,7 @@ async def get_all_items(db: AsyncSession = Depends(get_db)):
     Кэширование результата в Redis не требуется.
     """
     result = await db.execute(select(Item))
-    items = result.scalars().all()  # Получаем список всех объектов
+    items = result.scalars().all()
 
     return [
         ItemSchema.model_validate(item).model_dump() for item in items
@@ -65,12 +66,12 @@ async def create_item(item: ItemCreate, db: AsyncSession = Depends(get_db)):
     """
     new_item = Item(
         name=item.name, description=item.description
-    )  # Создаем объект модели
-    db.add(new_item)  # Добавляем его в сессию
-    await db.commit()  # Фиксируем изменения в базе данных
-    await db.refresh(new_item)  # Обновляем объект из базы данных (получаем `id`)
+    )
+    db.add(new_item)
+    await db.commit()
+    await db.refresh(new_item)
 
-    return new_item  # Возвращаем созданный объект
+    return new_item
 
 
 @router.put("/{item_id}", response_model=ItemSchema)
@@ -80,20 +81,18 @@ async def update_item(
     """
     Обновляет объект в базе данных и в кэше Redis.
     """
-    # Проверяем существование объекта в базе данных
+
     result = await db.execute(select(Item).where(Item.id == item_id))
     db_item = result.scalar_one_or_none()
 
     if not db_item:
         raise HTTPException(status_code=404, detail="Item not found")
 
-    # Обновляем объект в базе данных
     db_item.name = item.name
     db_item.description = item.description
-    await db.commit()  # Сохраняем изменения
-    await db.refresh(db_item)  # Обновляем объект
+    await db.commit()
+    await db.refresh(db_item)
 
-    # Преобразуем объект в Pydantic-схему
     validated_item = ItemSchema.model_validate(db_item).model_dump()
 
     # Обновляем кэш в Redis
@@ -108,14 +107,12 @@ async def delete_item(item_id: int, db: AsyncSession = Depends(get_db)):
     """
     Удаление объекта из базы данных и кэша Redis.
     """
-    # Проверяем существование объекта
     result = await db.execute(select(Item).where(Item.id == item_id))
     db_item = result.scalar_one_or_none()
 
     if not db_item:
         raise HTTPException(status_code=404, detail="Item not found")
 
-    # Удаляем объект из базы данных
     await db.delete(db_item)
     await db.commit()
 
@@ -124,3 +121,5 @@ async def delete_item(item_id: int, db: AsyncSession = Depends(get_db)):
     await redis_client.delete(cache_key)
 
     return {"detail": "Item deleted"}
+
+# END
