@@ -24,7 +24,7 @@ class RedisClient:
         Закрывает соединение с Redis, если оно существует.
         """
         if self.redis:
-            self.redis.close()  # Закрытие соединения
+            await self.redis.close()  # Закрытие соединения
 
     async def get(self, key):
         """
