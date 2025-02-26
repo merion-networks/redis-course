@@ -8,7 +8,7 @@ r.set("my_key", "Hello, Redis!")
 
 # Аналог GET my_key
 value = r.get("my_key")
-print(value)  # b'Hello, Redis!' (байты, если decode_responses=False)
+print(value)
 
 # Аналог DEL my_key
 r.delete("my_key")
