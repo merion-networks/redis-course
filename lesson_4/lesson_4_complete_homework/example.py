@@ -1,89 +1,90 @@
+import asyncio
 import redis.asyncio as aioredis
-from fastapi import FastAPI, HTTPException
 
-app = FastAPI()
-redis_client = aioredis.Redis(host="localhost", port=6379, decode_responses=True)
+# Ключ, под которым храним наше упорядоченное множество
+LEADERBOARD_KEY = "leaderboard_example"
 
-# Пусть ключ "leaderboard" будет содержать наш рейтинг
-LEADERBOARD_KEY = "leaderboard"
+async def main():
+    # Подключаемся к Redis
+    client = aioredis.Redis(host="localhost", port=6379, decode_responses=True)
+
+    # 1) ZADD: Добавление элементов с определённым score
+    # CLI:   ZADD leaderboard_example 100 userA 200 userB 150 userC
+    print("=== 1) ZADD ===")
+    await client.zadd(LEADERBOARD_KEY, {"userA": 100, "userB": 200, "userC": 150})
+    # Этот вызов добавляет (или обновляет) 3 элемента: userA, userB, userC
+
+    # 2) ZINCRBY: Увеличение score
+    # CLI:   ZINCRBY leaderboard_example 50 userA
+    print("\n=== 2) ZINCRBY ===")
+    new_score = await client.zincrby(LEADERBOARD_KEY, 50, "userA")
+    print(f"userA new score after +50 => {new_score}")
+
+    # 3) ZSCORE: Узнать текущий score элемента
+    # CLI:   ZSCORE leaderboard_example userA
+    print("\n=== 3) ZSCORE ===")
+    scoreA = await client.zscore(LEADERBOARD_KEY, "userA")
+    print(f"userA current score => {scoreA}")
+
+    # 4) ZRANK: Узнать позицию (по возрастанию score)
+    # CLI:   ZRANK leaderboard_example userB
+    print("\n=== 4) ZRANK ===")
+    rankB = await client.zrank(LEADERBOARD_KEY, "userB")  # 0-based индекс, 0 = наименьший score
+    print(f"userB rank by ascending order => {rankB}")
+
+    # 5) ZREVRANK: Позиция в убывающем порядке (0 = лидер)
+    # CLI:   ZREVRANK leaderboard_example userB
+    print("\n=== 5) ZREVRANK ===")
+    rev_rankB = await client.zrevrank(LEADERBOARD_KEY, "userB")
+    print(f"userB rank by descending order => {rev_rankB}")
+
+    # 6) ZRANGE: Получить элементы в порядке возрастания score
+    # CLI:   ZRANGE leaderboard_example 0 -1 WITHSCORES
+    print("\n=== 6) ZRANGE ===")
+    ascending_list = await client.zrange(LEADERBOARD_KEY, 0, -1, withscores=True)
+    print(f"Ascending order full list => {ascending_list}")
+
+    # 7) ZREVRANGE: Элементы в порядке убывания (топ-лист)
+    # CLI:   ZREVRANGE leaderboard_example 0 2 WITHSCORES
+    print("\n=== 7) ZREVRANGE (top 3) ===")
+    descending_top = await client.zrevrange(LEADERBOARD_KEY, 0, 2, withscores=True)
+    print(f"Top 3 by descending score => {descending_top}")
+
+    # 8) ZRANGEBYSCORE: Выборка по диапазону score
+    # CLI:   ZRANGEBYSCORE leaderboard_example 100 200 WITHSCORES
+    print("\n=== 8) ZRANGEBYSCORE ===")
+    between_100_200 = await client.zrangebyscore(LEADERBOARD_KEY, 100, 200, withscores=True)
+    print(f"Elements with score 100..200 => {between_100_200}")
+
+    # 9) ZREM: Удаляем элемент
+    # CLI:   ZREM leaderboard_example userC
+    print("\n=== 9) ZREM ===")
+    removed_count = await client.zrem(LEADERBOARD_KEY, "userC")
+    print(f"Removed userC => {removed_count} (0 or 1)")
+
+    # Проверяем, что userC удалён
+    new_list = await client.zrange(LEADERBOARD_KEY, 0, -1, withscores=True)
+    print(f"After removal => {new_list}")
+
+    # 10) ZREMRANGEBYRANK: Удаляем диапазон по позициям
+    # CLI:   ZREMRANGEBYRANK leaderboard_example 0 0  (удаляем самого последнего)
+    print("\n=== 10) ZREMRANGEBYRANK ===")
+    # Например, оставим только 1 элемент (удаляем всё с rank >= 1)
+    removed_count = await client.zremrangebyrank(LEADERBOARD_KEY, 1, -1)
+    print(f"Removed (rank >=1) => {removed_count}")
+
+    # Смотрим, что осталось
+    final_list = await client.zrange(LEADERBOARD_KEY, 0, -1, withscores=True)
+    print(f"Final list => {final_list}")
+
+    # 11) Дополнительно: ZCARD - узнать, сколько элементов в ZSET
+    # CLI:   ZCARD leaderboard_example
+    count = await client.zcard(LEADERBOARD_KEY)
+    print(f"\n=== 11) ZCARD ===\nCurrent total => {count}")
+
+    # Закрываем соединение
+    await client.aclose()
 
 
-@app.post("/leaderboard/add")
-async def add_or_update_score(item_id: str, score: float):
-    """
-    Устанавливает score для item_id (если item уже в ZSET, обновит).
-    """
-    # ZADD leaderboard score item_id
-    result = await redis_client.zadd(LEADERBOARD_KEY, {item_id: score})
-    # zadd возвращает количество новых элементов (которые раньше не было),
-    # если item_id уже существовал - score обновится, а result будет 0.
-    return {
-        "result": f"{'Inserted' if result else 'Updated'} score for {item_id}",
-        "score": score,
-    }
-
-
-@app.post("/leaderboard/increment")
-async def increment_score(item_id: str, increment: float = 1.0):
-    """
-    Увеличивает score для item_id на increment (по умолчанию +1).
-    ZINCRBY leaderboard increment item_id
-    """
-    new_score = await redis_client.zincrby(LEADERBOARD_KEY, increment, item_id)
-    return {"item_id": item_id, "new_score": new_score}
-
-
-@app.get("/leaderboard/top")
-async def get_top_n(n: int = 10):
-    """
-    Получаем TOP-n (score по убыванию).
-    ZREVRANGE leaderboard 0 n-1 WITHSCORES
-    """
-    top_members = await redis_client.zrevrange(
-        LEADERBOARD_KEY, 0, n - 1, withscores=True
-    )
-    # В redis.asyncio, если withscores=True, возвращается список кортежей [(member, score), ...]
-    return {
-        "leaderboard": [
-            {"item_id": member, "score": score} for (member, score) in top_members
-        ]
-    }
-
-
-@app.get("/leaderboard/rank")
-async def get_rank(item_id: str):
-    """
-    Узнаём позицию (ранг) элемента item_id (чем меньше индекс, тем выше в списке).
-    ZREVRANK вернёт индекс в обратном порядке, то есть 0 = 1 место.
-    """
-    # score = await redis_client.zscore(LEADERBOARD_KEY, item_id) чтобы вернуть вес
-    rank = await redis_client.zrevrank(LEADERBOARD_KEY, item_id)
-    if rank is None:
-        raise HTTPException(status_code=404, detail="Item not in leaderboard")
-    return {"item_id": item_id, "rank": rank + 1}  # rank=0 => 1-е место
-
-
-@app.delete("/leaderboard/remove")
-async def remove_item(item_id: str):
-    removed = await redis_client.zrem(LEADERBOARD_KEY, item_id)
-    return {"removed": bool(removed)}
-
-
-@app.delete("/leaderboard/trim")
-async def trim_leaderboard(keep: int = 100):
-    """
-    Оставляем только топ-keep.
-    Удаляем всех с индексом > keep-1 (т.е. 100, 101...).
-    """
-    removed_count = await redis_client.zremrangebyrank(LEADERBOARD_KEY, keep, -1)
-    return {"removed_count": removed_count}
-
-
-@app.delete("/leaderboard/trim")
-async def trim_leaderboard(keep: int = 100):
-    """
-    Оставляем в лидере только первые keep участников.
-    Удаляем всех с индексом > keep-1.
-    """
-    removed_count = await redis_client.zremrangebyrank(LEADERBOARD_KEY, keep, -1)
-    return {"removed_count": removed_count}
+if __name__ == "__main__":
+    asyncio.run(main())
