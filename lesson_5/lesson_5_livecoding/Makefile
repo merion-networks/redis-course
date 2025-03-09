@@ -1,5 +1,5 @@
 dev:
 	poetry run uvicorn app.main:app --reload
 
-factory:
-	poetry run python3 factory.py
+example:
+	poetry run python3 example.py
