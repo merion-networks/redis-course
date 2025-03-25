@@ -1,0 +1,51 @@
+42797:C 25 Mar 2025 15:24:01.864 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+42797:C 25 Mar 2025 15:24:01.865 # Redis version=7.0.15, bits=64, commit=00000000, modified=0, pid=42797, just started
+42797:C 25 Mar 2025 15:24:01.865 # Configuration loaded
+42797:M 25 Mar 2025 15:24:01.866 * monotonic clock: POSIX clock_gettime
+42797:M 25 Mar 2025 15:24:01.867 * No cluster configuration found, I'm 097b5a74163fca92f985d8277153caaca8f1c519
+42797:M 25 Mar 2025 15:24:01.874 * Running mode=cluster, port=7007.
+42797:M 25 Mar 2025 15:24:01.874 # Server initialized
+42797:M 25 Mar 2025 15:24:01.874 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+42797:M 25 Mar 2025 15:24:01.875 * Loading RDB produced by version 7.0.15
+42797:M 25 Mar 2025 15:24:01.875 * RDB age 120 seconds
+42797:M 25 Mar 2025 15:24:01.875 * RDB memory usage when created 1.53 Mb
+42797:M 25 Mar 2025 15:24:01.875 * Done loading RDB, keys loaded: 0, keys expired: 0.
+42797:M 25 Mar 2025 15:24:01.875 * DB loaded from disk: 0.000 seconds
+42797:M 25 Mar 2025 15:24:01.875 * Ready to accept connections
+43118:C 25 Mar 2025 15:24:49.175 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+43118:C 25 Mar 2025 15:24:49.175 # Redis version=7.0.15, bits=64, commit=00000000, modified=0, pid=43118, just started
+43118:C 25 Mar 2025 15:24:49.175 # Configuration loaded
+43118:M 25 Mar 2025 15:24:49.176 * monotonic clock: POSIX clock_gettime
+43118:M 25 Mar 2025 15:24:49.177 # Warning: Could not create server TCP listening socket 0.0.0.0:7007: bind: Address already in use
+43118:M 25 Mar 2025 15:24:49.177 # Failed listening on port 7007 (TCP), aborting.
+43416:C 25 Mar 2025 15:25:32.886 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+43416:C 25 Mar 2025 15:25:32.886 # Redis version=7.0.15, bits=64, commit=00000000, modified=0, pid=43416, just started
+43416:C 25 Mar 2025 15:25:32.886 # Configuration loaded
+43416:M 25 Mar 2025 15:25:32.888 * monotonic clock: POSIX clock_gettime
+43416:M 25 Mar 2025 15:25:32.888 # Warning: Could not create server TCP listening socket 0.0.0.0:7007: bind: Address already in use
+43416:M 25 Mar 2025 15:25:32.888 # Failed listening on port 7007 (TCP), aborting.
+44075:C 25 Mar 2025 15:26:36.104 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+44075:C 25 Mar 2025 15:26:36.104 # Redis version=7.0.15, bits=64, commit=00000000, modified=0, pid=44075, just started
+44075:C 25 Mar 2025 15:26:36.104 # Configuration loaded
+44075:M 25 Mar 2025 15:26:36.104 * monotonic clock: POSIX clock_gettime
+44075:M 25 Mar 2025 15:26:36.104 # Warning: Could not create server TCP listening socket 0.0.0.0:7007: bind: Address already in use
+44075:M 25 Mar 2025 15:26:36.104 # Failed listening on port 7007 (TCP), aborting.
+42797:M 25 Mar 2025 15:26:56.741 # configEpoch set to 8 via CLUSTER SET-CONFIG-EPOCH
+42797:M 25 Mar 2025 15:26:56.796 # IP address for this node updated to 127.0.0.1
+42797:S 25 Mar 2025 15:27:00.758 * Before turning into a replica, using my own master parameters to synthesize a cached master: I may be able to synchronize with the new master with just a partial transfer.
+42797:S 25 Mar 2025 15:27:00.758 * Connecting to MASTER 127.0.0.1:7001
+42797:S 25 Mar 2025 15:27:00.758 * MASTER <-> REPLICA sync started
+42797:S 25 Mar 2025 15:27:00.758 # Cluster state changed: ok
+42797:S 25 Mar 2025 15:27:00.758 * Non blocking connect for SYNC fired the event.
+42797:S 25 Mar 2025 15:27:00.759 * Master replied to PING, replication can continue...
+42797:S 25 Mar 2025 15:27:00.759 * Trying a partial resynchronization (request 66effb47fe0ecfcd064de24a4e61ebd910dd1fb6:1).
+42797:S 25 Mar 2025 15:27:05.241 * Full resync from master: 2f19955f1b212fb188762dd28186a12be7c05ba6:14
+42797:S 25 Mar 2025 15:27:05.242 * MASTER <-> REPLICA sync: receiving streamed RDB from master with EOF to disk
+42797:S 25 Mar 2025 15:27:05.243 * Discarding previously cached master state.
+42797:S 25 Mar 2025 15:27:05.243 * MASTER <-> REPLICA sync: Flushing old data
+42797:S 25 Mar 2025 15:27:05.243 * MASTER <-> REPLICA sync: Loading DB in memory
+42797:S 25 Mar 2025 15:27:05.250 * Loading RDB produced by version 7.0.15
+42797:S 25 Mar 2025 15:27:05.250 * RDB age 0 seconds
+42797:S 25 Mar 2025 15:27:05.250 * RDB memory usage when created 1.81 Mb
+42797:S 25 Mar 2025 15:27:05.250 * Done loading RDB, keys loaded: 0, keys expired: 0.
+42797:S 25 Mar 2025 15:27:05.250 * MASTER <-> REPLICA sync: Finished with success

@@ -1,0 +1,47 @@
+41549:C 25 Mar 2025 15:21:35.800 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+41549:C 25 Mar 2025 15:21:35.800 # Redis version=7.0.15, bits=64, commit=00000000, modified=0, pid=41549, just started
+41549:C 25 Mar 2025 15:21:35.800 # Configuration loaded
+41549:M 25 Mar 2025 15:21:35.802 * monotonic clock: POSIX clock_gettime
+41549:M 25 Mar 2025 15:21:35.804 * No cluster configuration found, I'm 014082446350691f763f1a5ca9d26a5fd3ce5386
+41549:M 25 Mar 2025 15:21:35.818 * Running mode=cluster, port=7001.
+41549:M 25 Mar 2025 15:21:35.818 # Server initialized
+41549:M 25 Mar 2025 15:21:35.818 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+41549:M 25 Mar 2025 15:21:35.819 * Ready to accept connections
+41549:signal-handler (1742890921) Received SIGTERM scheduling shutdown...
+41549:M 25 Mar 2025 15:22:01.495 # User requested shutdown...
+41549:M 25 Mar 2025 15:22:01.495 * Saving the final RDB snapshot before exiting.
+41549:M 25 Mar 2025 15:22:01.498 * DB saved on disk
+41549:M 25 Mar 2025 15:22:01.498 * Removing the pid file.
+41549:M 25 Mar 2025 15:22:01.499 # Redis is now ready to exit, bye bye...
+42078:C 25 Mar 2025 15:22:22.722 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+42078:C 25 Mar 2025 15:22:22.722 # Redis version=7.0.15, bits=64, commit=00000000, modified=0, pid=42078, just started
+42078:C 25 Mar 2025 15:22:22.722 # Configuration loaded
+42078:M 25 Mar 2025 15:22:22.724 * monotonic clock: POSIX clock_gettime
+42078:M 25 Mar 2025 15:22:22.726 * Node configuration loaded, I'm 014082446350691f763f1a5ca9d26a5fd3ce5386
+42078:M 25 Mar 2025 15:22:22.727 * Running mode=cluster, port=7001.
+42078:M 25 Mar 2025 15:22:22.727 # Server initialized
+42078:M 25 Mar 2025 15:22:22.727 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+42078:M 25 Mar 2025 15:22:22.728 * Loading RDB produced by version 7.0.15
+42078:M 25 Mar 2025 15:22:22.728 * RDB age 21 seconds
+42078:M 25 Mar 2025 15:22:22.728 * RDB memory usage when created 1.53 Mb
+42078:M 25 Mar 2025 15:22:22.728 * Done loading RDB, keys loaded: 0, keys expired: 0.
+42078:M 25 Mar 2025 15:22:22.728 * DB loaded from disk: 0.000 seconds
+42078:M 25 Mar 2025 15:22:22.728 * Ready to accept connections
+43591:C 25 Mar 2025 15:25:48.594 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+43591:C 25 Mar 2025 15:25:48.594 # Redis version=7.0.15, bits=64, commit=00000000, modified=0, pid=43591, just started
+43591:C 25 Mar 2025 15:25:48.594 # Configuration loaded
+43591:M 25 Mar 2025 15:25:48.596 * monotonic clock: POSIX clock_gettime
+43591:M 25 Mar 2025 15:25:48.596 # Warning: Could not create server TCP listening socket 0.0.0.0:7001: bind: Address already in use
+43591:M 25 Mar 2025 15:25:48.596 # Failed listening on port 7001 (TCP), aborting.
+43769:C 25 Mar 2025 15:26:09.018 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+43769:C 25 Mar 2025 15:26:09.018 # Redis version=7.0.15, bits=64, commit=00000000, modified=0, pid=43769, just started
+43769:C 25 Mar 2025 15:26:09.018 # Configuration loaded
+43769:M 25 Mar 2025 15:26:09.019 * monotonic clock: POSIX clock_gettime
+43769:M 25 Mar 2025 15:26:09.020 # Warning: Could not create server TCP listening socket 0.0.0.0:7001: bind: Address already in use
+43769:M 25 Mar 2025 15:26:09.020 # Failed listening on port 7001 (TCP), aborting.
+44073:C 25 Mar 2025 15:26:36.101 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+44073:C 25 Mar 2025 15:26:36.101 # Redis version=7.0.15, bits=64, commit=00000000, modified=0, pid=44073, just started
+44073:C 25 Mar 2025 15:26:36.101 # Configuration loaded
+44073:M 25 Mar 2025 15:26:36.101 * monotonic clock: POSIX clock_gettime
+44073:M 25 Mar 2025 15:26:36.101 # Warning: Could not create server TCP listening socket 0.0.0.0:7001: bind: Address already in use
+44073:M 25 Mar 2025 15:26:36.101 # Failed listening on port 7001 (TCP), aborting.

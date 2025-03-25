@@ -1,0 +1,4 @@
+nodes-*.conf
+appendonlydir/
+.venv/
+dump.rdb
