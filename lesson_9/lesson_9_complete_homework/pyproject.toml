@@ -1,0 +1,8 @@
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+redis = "^5.2.1"
+fastapi = "^0.115.12"
+uvicorn = "^0.34.0"

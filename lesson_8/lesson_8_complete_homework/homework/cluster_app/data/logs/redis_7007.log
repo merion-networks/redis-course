@@ -49,3 +49,173 @@
 42797:S 25 Mar 2025 15:27:05.250 * RDB memory usage when created 1.81 Mb
 42797:S 25 Mar 2025 15:27:05.250 * Done loading RDB, keys loaded: 0, keys expired: 0.
 42797:S 25 Mar 2025 15:27:05.250 * MASTER <-> REPLICA sync: Finished with success
+42797:S 25 Mar 2025 18:41:13.926 # MASTER timeout: no data nor PING received...
+42797:S 25 Mar 2025 18:41:13.926 # Connection with master lost.
+42797:S 25 Mar 2025 18:41:13.926 * Caching the disconnected master state.
+42797:S 25 Mar 2025 18:41:13.926 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 25 Mar 2025 18:41:13.926 * MASTER <-> REPLICA sync started
+42797:S 25 Mar 2025 18:41:13.926 * Non blocking connect for SYNC fired the event.
+42797:S 25 Mar 2025 18:41:13.927 * Master replied to PING, replication can continue...
+42797:S 25 Mar 2025 18:41:13.927 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:13777).
+42797:S 25 Mar 2025 18:41:13.927 * Successful partial resynchronization with master.
+42797:S 25 Mar 2025 18:41:13.927 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 25 Mar 2025 23:38:10.707 # Connection with master lost.
+42797:S 25 Mar 2025 23:38:10.707 * Caching the disconnected master state.
+42797:S 25 Mar 2025 23:38:10.707 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 25 Mar 2025 23:38:10.707 * MASTER <-> REPLICA sync started
+42797:S 25 Mar 2025 23:38:10.707 * Non blocking connect for SYNC fired the event.
+42797:S 25 Mar 2025 23:38:10.707 * Master replied to PING, replication can continue...
+42797:S 25 Mar 2025 23:38:10.708 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:36751).
+42797:S 25 Mar 2025 23:38:10.708 * Successful partial resynchronization with master.
+42797:S 25 Mar 2025 23:38:10.708 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 26 Mar 2025 00:02:37.256 # Connection with master lost.
+42797:S 26 Mar 2025 00:02:37.256 * Caching the disconnected master state.
+42797:S 26 Mar 2025 00:02:37.256 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 26 Mar 2025 00:02:37.256 * MASTER <-> REPLICA sync started
+42797:S 26 Mar 2025 00:02:37.257 * Non blocking connect for SYNC fired the event.
+42797:S 26 Mar 2025 00:02:37.269 * Master replied to PING, replication can continue...
+42797:S 26 Mar 2025 00:02:37.270 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:36905).
+42797:S 26 Mar 2025 00:02:37.271 * Successful partial resynchronization with master.
+42797:S 26 Mar 2025 00:02:37.271 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 26 Mar 2025 11:35:15.244 # MASTER timeout: no data nor PING received...
+42797:S 26 Mar 2025 11:35:15.246 # Connection with master lost.
+42797:S 26 Mar 2025 11:35:15.246 * Caching the disconnected master state.
+42797:S 26 Mar 2025 11:35:15.246 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 26 Mar 2025 11:35:15.247 * MASTER <-> REPLICA sync started
+42797:S 26 Mar 2025 11:35:15.247 * Non blocking connect for SYNC fired the event.
+42797:S 26 Mar 2025 11:35:15.254 * Master replied to PING, replication can continue...
+42797:S 26 Mar 2025 11:35:15.255 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:74943).
+42797:S 26 Mar 2025 11:35:15.256 * Successful partial resynchronization with master.
+42797:S 26 Mar 2025 11:35:15.256 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 26 Mar 2025 14:07:47.241 # Connection with master lost.
+42797:S 26 Mar 2025 14:07:47.241 * Caching the disconnected master state.
+42797:S 26 Mar 2025 14:07:47.241 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 26 Mar 2025 14:07:47.241 * MASTER <-> REPLICA sync started
+42797:S 26 Mar 2025 14:07:47.242 * Non blocking connect for SYNC fired the event.
+42797:S 26 Mar 2025 14:07:47.242 * Master replied to PING, replication can continue...
+42797:S 26 Mar 2025 14:07:47.248 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:77239).
+42797:S 26 Mar 2025 14:07:47.249 * Successful partial resynchronization with master.
+42797:S 26 Mar 2025 14:07:47.249 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 26 Mar 2025 15:30:45.341 # MASTER timeout: no data nor PING received...
+42797:S 26 Mar 2025 15:30:45.342 # Connection with master lost.
+42797:S 26 Mar 2025 15:30:45.342 * Caching the disconnected master state.
+42797:S 26 Mar 2025 15:30:45.342 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 26 Mar 2025 15:30:45.343 * MASTER <-> REPLICA sync started
+42797:S 26 Mar 2025 15:30:45.343 * Non blocking connect for SYNC fired the event.
+42797:S 26 Mar 2025 15:30:45.343 * Master replied to PING, replication can continue...
+42797:S 26 Mar 2025 15:30:45.345 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:82139).
+42797:S 26 Mar 2025 15:30:45.347 * Successful partial resynchronization with master.
+42797:S 26 Mar 2025 15:30:45.347 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 26 Mar 2025 20:47:40.342 # MASTER timeout: no data nor PING received...
+42797:S 26 Mar 2025 20:47:40.344 # Connection with master lost.
+42797:S 26 Mar 2025 20:47:40.344 * Caching the disconnected master state.
+42797:S 26 Mar 2025 20:47:40.344 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 26 Mar 2025 20:47:40.345 * MASTER <-> REPLICA sync started
+42797:S 26 Mar 2025 20:47:40.345 * Non blocking connect for SYNC fired the event.
+42797:S 26 Mar 2025 20:47:40.347 * Master replied to PING, replication can continue...
+42797:S 26 Mar 2025 20:47:40.347 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:105015).
+42797:S 26 Mar 2025 20:47:40.348 * Successful partial resynchronization with master.
+42797:S 26 Mar 2025 20:47:40.348 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 26 Mar 2025 23:46:37.447 # MASTER timeout: no data nor PING received...
+42797:S 26 Mar 2025 23:46:37.447 # Connection with master lost.
+42797:S 26 Mar 2025 23:46:37.447 * Caching the disconnected master state.
+42797:S 26 Mar 2025 23:46:37.448 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 26 Mar 2025 23:46:37.448 * MASTER <-> REPLICA sync started
+42797:S 26 Mar 2025 23:46:37.448 * Non blocking connect for SYNC fired the event.
+42797:S 26 Mar 2025 23:46:37.448 * Master replied to PING, replication can continue...
+42797:S 26 Mar 2025 23:46:37.448 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:116369).
+42797:S 26 Mar 2025 23:46:37.448 * Successful partial resynchronization with master.
+42797:S 26 Mar 2025 23:46:37.448 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 27 Mar 2025 12:52:55.314 # Connection with master lost.
+42797:S 27 Mar 2025 12:52:55.315 * Caching the disconnected master state.
+42797:S 27 Mar 2025 12:52:55.315 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 27 Mar 2025 12:52:55.315 * MASTER <-> REPLICA sync started
+42797:S 27 Mar 2025 12:52:55.316 * Non blocking connect for SYNC fired the event.
+42797:S 27 Mar 2025 12:52:55.316 * Master replied to PING, replication can continue...
+42797:S 27 Mar 2025 12:52:55.317 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:148121).
+42797:S 27 Mar 2025 12:52:55.317 * Successful partial resynchronization with master.
+42797:S 27 Mar 2025 12:52:55.317 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 27 Mar 2025 21:03:43.548 # MASTER timeout: no data nor PING received...
+42797:S 27 Mar 2025 21:03:43.548 # Connection with master lost.
+42797:S 27 Mar 2025 21:03:43.548 * Caching the disconnected master state.
+42797:S 27 Mar 2025 21:03:43.548 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 27 Mar 2025 21:03:43.548 * MASTER <-> REPLICA sync started
+42797:S 27 Mar 2025 21:03:43.548 * Non blocking connect for SYNC fired the event.
+42797:S 27 Mar 2025 21:03:43.548 * Master replied to PING, replication can continue...
+42797:S 27 Mar 2025 21:03:43.548 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:178655).
+42797:S 27 Mar 2025 21:03:43.548 * Successful partial resynchronization with master.
+42797:S 27 Mar 2025 21:03:43.548 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 28 Mar 2025 13:37:44.964 # MASTER timeout: no data nor PING received...
+42797:S 28 Mar 2025 13:37:44.965 # Connection with master lost.
+42797:S 28 Mar 2025 13:37:44.965 * Caching the disconnected master state.
+42797:S 28 Mar 2025 13:37:44.965 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 28 Mar 2025 13:37:44.965 * MASTER <-> REPLICA sync started
+42797:S 28 Mar 2025 13:37:44.965 * Non blocking connect for SYNC fired the event.
+42797:S 28 Mar 2025 13:37:44.965 * Master replied to PING, replication can continue...
+42797:S 28 Mar 2025 13:37:44.965 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:222923).
+42797:S 28 Mar 2025 13:37:44.965 * Successful partial resynchronization with master.
+42797:S 28 Mar 2025 13:37:44.965 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 28 Mar 2025 20:29:06.162 # Connection with master lost.
+42797:S 28 Mar 2025 20:29:06.163 * Caching the disconnected master state.
+42797:S 28 Mar 2025 20:29:06.163 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 28 Mar 2025 20:29:06.163 * MASTER <-> REPLICA sync started
+42797:S 28 Mar 2025 20:29:06.163 * Non blocking connect for SYNC fired the event.
+42797:S 28 Mar 2025 20:29:06.164 * Master replied to PING, replication can continue...
+42797:S 28 Mar 2025 20:29:06.164 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:245995).
+42797:S 28 Mar 2025 20:29:06.164 * Successful partial resynchronization with master.
+42797:S 28 Mar 2025 20:29:06.164 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 29 Mar 2025 09:01:42.229 # MASTER timeout: no data nor PING received...
+42797:S 29 Mar 2025 09:01:42.231 # Connection with master lost.
+42797:S 29 Mar 2025 09:01:42.231 * Caching the disconnected master state.
+42797:S 29 Mar 2025 09:01:42.232 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 29 Mar 2025 09:01:42.233 * MASTER <-> REPLICA sync started
+42797:S 29 Mar 2025 09:01:42.233 * Non blocking connect for SYNC fired the event.
+42797:S 29 Mar 2025 09:01:42.250 * Master replied to PING, replication can continue...
+42797:S 29 Mar 2025 09:01:42.268 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:277033).
+42797:S 29 Mar 2025 09:01:42.269 * Successful partial resynchronization with master.
+42797:S 29 Mar 2025 09:01:42.269 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 29 Mar 2025 09:50:24.324 # MASTER timeout: no data nor PING received...
+42797:S 29 Mar 2025 09:50:24.324 # Connection with master lost.
+42797:S 29 Mar 2025 09:50:24.324 * Caching the disconnected master state.
+42797:S 29 Mar 2025 09:50:24.325 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 29 Mar 2025 09:50:24.325 * MASTER <-> REPLICA sync started
+42797:S 29 Mar 2025 09:50:24.325 * Non blocking connect for SYNC fired the event.
+42797:S 29 Mar 2025 09:50:24.326 * Master replied to PING, replication can continue...
+42797:S 29 Mar 2025 09:50:24.326 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:278335).
+42797:S 29 Mar 2025 09:50:24.327 * Successful partial resynchronization with master.
+42797:S 29 Mar 2025 09:50:24.327 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 29 Mar 2025 12:29:25.496 # MASTER timeout: no data nor PING received...
+42797:S 29 Mar 2025 12:29:25.496 # Connection with master lost.
+42797:S 29 Mar 2025 12:29:25.496 * Caching the disconnected master state.
+42797:S 29 Mar 2025 12:29:25.496 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 29 Mar 2025 12:29:25.496 * MASTER <-> REPLICA sync started
+42797:S 29 Mar 2025 12:29:25.496 * Non blocking connect for SYNC fired the event.
+42797:S 29 Mar 2025 12:29:25.497 * Master replied to PING, replication can continue...
+42797:S 29 Mar 2025 12:29:25.497 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:281023).
+42797:S 29 Mar 2025 12:29:25.497 * Successful partial resynchronization with master.
+42797:S 29 Mar 2025 12:29:25.497 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 29 Mar 2025 15:44:20.268 # MASTER timeout: no data nor PING received...
+42797:S 29 Mar 2025 15:44:20.268 # Connection with master lost.
+42797:S 29 Mar 2025 15:44:20.268 * Caching the disconnected master state.
+42797:S 29 Mar 2025 15:44:20.268 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 29 Mar 2025 15:44:20.276 * MASTER <-> REPLICA sync started
+42797:S 29 Mar 2025 15:44:20.276 * Non blocking connect for SYNC fired the event.
+42797:S 29 Mar 2025 15:44:20.277 * Master replied to PING, replication can continue...
+42797:S 29 Mar 2025 15:44:20.278 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:281723).
+42797:S 29 Mar 2025 15:44:20.279 * Successful partial resynchronization with master.
+42797:S 29 Mar 2025 15:44:20.279 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:S 29 Mar 2025 17:05:48.117 # Connection with master lost.
+42797:S 29 Mar 2025 17:05:48.117 * Caching the disconnected master state.
+42797:S 29 Mar 2025 17:05:48.117 * Reconnecting to MASTER 127.0.0.1:7001
+42797:S 29 Mar 2025 17:05:48.118 * MASTER <-> REPLICA sync started
+42797:S 29 Mar 2025 17:05:48.118 * Non blocking connect for SYNC fired the event.
+42797:S 29 Mar 2025 17:05:48.118 * Master replied to PING, replication can continue...
+42797:S 29 Mar 2025 17:05:48.118 * Trying a partial resynchronization (request 2f19955f1b212fb188762dd28186a12be7c05ba6:284355).
+42797:S 29 Mar 2025 17:05:48.119 * Successful partial resynchronization with master.
+42797:S 29 Mar 2025 17:05:48.119 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+42797:signal-handler (1743242940) Received SIGTERM scheduling shutdown...
+42797:S 29 Mar 2025 17:09:00.801 # User requested shutdown...
+42797:S 29 Mar 2025 17:09:00.801 * Saving the final RDB snapshot before exiting.
+42797:S 29 Mar 2025 17:09:00.816 * DB saved on disk
+42797:S 29 Mar 2025 17:09:00.816 * Removing the pid file.
+42797:S 29 Mar 2025 17:09:00.816 # Redis is now ready to exit, bye bye...

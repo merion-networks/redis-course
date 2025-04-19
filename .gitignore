@@ -8,3 +8,5 @@ help_util.py
 output.txt
 __pycache__/
 *.pyc
+final_project/partial
+lesson_9/lesson_9_partial

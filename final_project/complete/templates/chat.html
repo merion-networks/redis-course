@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Welcome, {{ username }}</h2>
+  <form method="post" action="/chat/send">
+    <input name="message" placeholder="Enter message" required>
+    <input type="hidden" name="token" value="{{ token }}">
+    <button>Send</button>
+  </form>
+
+  <h3>Messages:</h3>
+    <div id="chat-box">
+    {% for id, msg in messages %}
+        <div><b>{{ msg["user"] }}:</b> {{ msg["message"] }}</div>
+    {% endfor %}
+    </div>
+    <script src="/static/ws.js"></script>
+  <br>
+  <a href="/logout?token={{ token }}">Logout</a>
+</body>
+</html>
